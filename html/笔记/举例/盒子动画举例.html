@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盒子动画举例</title>
+	<style type="text/css">
+		/* 定义动画，moving是自定义的动画名字*/
+		@keyframes moving{
+			from{
+				width: 100px;
+			}
+			to{
+				width: 500px;
+			}
+		}
+
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+
+			
+			animation:moving 500ms ease 1s infinite alternate; /* 虽然定义了重复3次，但是指定了alternate指定它按原路返回，那么一去一回就算两次，所以在浏览器中看到的图画只变换了两次 */
+			animation-play-state: paused;  /* 要让动画默认停止，需要把animation-play-state放在animation后面 */
+		}
+
+		.box:hover{
+			animation-play-state: running;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

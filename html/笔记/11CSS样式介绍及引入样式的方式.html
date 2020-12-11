@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS样式介绍及引入样式的方式</title>
+</head>
+
+<body>
+    <div>
+        <h5>课程介绍</h5>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了让网页元素的样式更加丰富，也为了让网页的内容和样式能拆开，CSS由此诞生。有了CSS，html中大部分表现样式的标签就废弃不用了，html只负责文档的结构和内容，表现形式完全交给CSS，html文档变得更加简介。
+        </p>
+    </div>
+
+    <h3>css基本语法及页面引用</h3>
+
+    <div>
+        <h5>css基本语法</h5>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            css的定义方法是：选择器{属性：值；属性：值；属性：值；} <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            选择器是将样式和页面元素关联起来的名称，属性是希望设置的样式属性每个属性有一个或多个值，代码示例：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            /*css注释 ctrl+shift+"/" */<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            div{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            width:100px;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            height:100px;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            color:red;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            }<br>
+        </div>
+    </div>
+
+    <div>
+        <h5>css页面引入方法：</h5>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            css是另一种文件格式，所以需要将css和html两种文件格式关联起来
+        </p>
+        <ol>
+            <li>外联式：通过link标签，连接到外部样式表到页面中（link标签放在head标签块中）
+                <p>&lt;link rel="stylesheet" type="text/css" href="css/main.css"&gt;</p>
+            </li>
+
+            <li>嵌入式：通过style标签，在网页上创建嵌入的样式表（style标签放在head标签块中）
+                <p>&lt;style type="text/css"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    div{width:100px; height:100px; color:red}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    ...<br>
+                    &lt;/style&gt;
+                </p>
+            </li>
+
+            <li>内联式：通过标签的style属性，在标签上直接写样式
+                <p>&lt;div style="width:100px; height:100px; color:red"&gt;......&lt;/div&gt;</p>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

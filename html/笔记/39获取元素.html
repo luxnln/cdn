@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>获取元素</title>
+	<style type="text/css">
+		.box {
+			background-color: lightgray;
+			display: block;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>获取元素方法一</h3>
+	<p>可以使用内置对象document上的getElementById方法来获取页面上设置了id属性的元素，获取到的是一个html对象，然后将它赋值给一个变量，比如：</p>
+	<div class="box">
+		&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;
+		var oDiv = document.getElementById('div1');<br>
+		&lt;/script&gt;<br>
+		...<br>
+		&lt;div id="div1"&gt;这是一个div元素&lt;/div&gt;
+	</div>
+	<p>上面的语句，如果把javascript卸载元素的上面，就会出错，因为页面上从上往下加载执行的，javascript去页面上获取元素div1的时候，元素div1还没有加载，解决方法有两种：<br><br>&nbsp;&nbsp;&nbsp;
+		第一种方法：将javascript放在页面最下面
+		<span class="box">&nbsp;&nbsp;&nbsp;
+			...<br>&nbsp;&nbsp;&nbsp;
+			&lt;div id="div1"&gt;这是一个div元素&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;
+			...<br>
+			<br>&nbsp;&nbsp;&nbsp;
+			&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var oDiv = document.getElementById('div1');<br>&nbsp;&nbsp;&nbsp;
+			&lt;/script&gt;
+		</span><br>&nbsp;&nbsp;&nbsp;
+		第二种方法：将javascript语句放到window.onload触发的函数里面，获取元素的语句会在页面加载完后才行，就不会出错了。（在body标签内）<br>
+		<span class="box">&nbsp;&nbsp;&nbsp;
+			&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			window.onload = function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var oDiv = document.getElementById('div1');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			}<br>&nbsp;&nbsp;&nbsp;
+			&lt;/script&gt;<br>&nbsp;&nbsp;&nbsp;
+			...<br>&nbsp;&nbsp;&nbsp;
+			&lt;div id="div1"&gt;这是一个div元素&lt;/div&gt;
+		</span>
+	</p>
+	<a href="举例/获取元素举例.html" target="_blank">获取元素举例</a>
+
+	<h3>获取元素方法二</h3>
+	<p>可以使用内置对象document上的getElementsByTagName方法来获取页面上的某一种标签，获取的是一个选择集，不是数组，但是可以用下标的方式操作选择集里面的标签元素(注：是getElementsByTagName，有s)
+	</p>
+	<div class="box">
+		&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;
+		window.onload = function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		var aLi = document.getElementsByTagName('li');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		// aLi.style.backgroundColor = 'gold'; &nbsp;// 出错！不能同时设置多个li<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		alert(aLi.length);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		aLi[0].style.backgroundColor = 'gold';<br>&nbsp;&nbsp;&nbsp;
+		}<br>
+		&lt;/script&gt;<br>
+		...<br>
+		&lt;ul&gt;
+		&lt;li&gt;1&lt;/li&gt;
+		&lt;li&gt;2&lt;/li&gt;
+		&lt;li&gt;3&lt;/li&gt;
+		&lt;li&gt;4&lt;/li&gt;
+		&lt;li&gt;5&lt;/li&gt;
+		&lt;li&gt;6&lt;/li&gt;
+		&lt;/ul&gt;
+	</div>
+</body>
+
+</html>

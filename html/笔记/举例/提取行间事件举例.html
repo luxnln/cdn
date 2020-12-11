@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提取行间事件举例</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			
+			var oBtn = document.getElementById('btn01');
+			// 将事件属性和一个函数关联，函数不能在后面接()，否则就是直接执行了
+			oBtn.onclick = fnChange;
+
+
+			function fnChange(){
+				var oDiv = document.getElementById('div1');
+				oDiv.style.color = "red";
+				oDiv.style.fontSize = "30px";
+			}
+
+			/*
+			匿名函数写法：
+				oBtn.onclick = function(){
+				var oDiv = document.getElementById('div1');
+				oDiv.style.color = "red";
+				oDiv.style.fontSize = "30px";
+			}
+			*/
+		}
+
+	</script>
+</head>
+<body>
+	<div id="div1">这是一个div元素</div>
+	<input type="button" id="btn01" name="" value="改变div">
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Math使用示例</title>
+	<script type="text/javascript">
+		var iPi = Math.PI;  // PI等于圆周率
+
+		var arr = [];
+
+		for(var i = 0; i < 20; i++){
+			// Math.random 只能返回0到1之间的随机数，不包括1
+			var iNum = Math.random();
+
+			arr.push(iNum);
+		}
+
+		console.log(arr);  // 关于console.log()在49调试程序的方法.htmlm有介绍
+
+		// 向下取整，去掉小数部分
+		alert(Math.floor(5.6))  // 弹出5
+
+		// 上取整，去掉小数部分，整体加1
+		alert(Math.ceil(5.6))  // 弹出6
+
+		// 10~20之间的随机数
+		var iNum1 = 10;
+		var iNum2 = 20;
+		var arr2 = [];
+
+		for(var i = 0; i < 30; i++){
+			// 生成10~20的随机数，能取20
+			var iNum3 = Math.floor((iNum2 - iNum1 + 1)*Math.random()) + iNum1;
+
+			arr2.push(iNum3);
+		}
+
+		console.log(arr2);
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

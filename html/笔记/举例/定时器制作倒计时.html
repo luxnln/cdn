@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器制作倒计时</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oDiv = document.getElementById('div1');
+
+			setInterval(fnTime, 30);
+
+			function fnTime(){
+				// 实际开发中需要读取后台时间，可以通过ajax来读取
+				var sNow = new Date();
+
+				// 未来时间：4月30日晚24点
+				var sFuture = new Date(2019, 4, 1, 0, 0, 0);  // 月份是0~11
+
+				// 计算还有多少秒
+				var sTime = parseInt((sFuture - sNow) / 1000);
+
+				var iSeconds = sTime%60;  // 取余得到秒数
+				var iMinute = parseInt(sTime/60)%60;  // 得到分钟数
+				var iHours = parseInt(sTime/3600)%24; // 得到小时数
+				var iDay = parseInt(sTime/3600/24);  // 得到天数
+
+				var sTr = '距离5月1日还有：' + iDay + '天' + iHours + '小时' + iMinute + '分钟' + iSeconds + '秒';
+				oDiv.innerHTML = sTr;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

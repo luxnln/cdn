@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>margin相关技巧</title>
+</head>
+
+<body>
+    <h3>盒子模型使用技巧及相关问题</h3>
+
+    <div>
+        <h5>margin相关技巧</h5>
+        <div>&nbsp;&nbsp;&nbsp;
+            1、设置元素水平居中：margin x1 auto x2;&nbsp;&nbsp;auto只能用在宽度，不能用在高度<br>&nbsp;&nbsp;&nbsp;
+            2、margin负值让元素位移及边框合并;因为body标签有一个8px默认的margin，所以当把一个body下的盒子的margin值为0的时候并不能贴边，需要使用负值（只有margin有负值）
+        </div>
+    </div>
+
+    <div>
+        <h5>外边距合并</h5>
+        <div>&nbsp;&nbsp;&nbsp;
+            外边距合并指的是，当两个垂直外边距(一个盒子的下边距，一个盒子的上边距）相遇时，它们将形成一个外边距，合并后的外边距的高度等于两个发生合并的外边距的高度中较大者。例如：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="imges/外边距合并代码.PNG">&nbsp;&nbsp;&nbsp;<img src="imges/外边距合并效果图.PNG"><br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            解决方法如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ol>
+                <li>使用这种特性</li>
+                <li>设置一边的外边距（例如设置top不设置bottom），一般设置margin-top</li>
+                <li>将元素浮动或定位</li>
+            </ol>
+        </div>
+    </div>
+
+    <div>
+        <h5>margin-top塌陷</h5>
+        <div>&nbsp;&nbsp;&nbsp;
+            在两个盒子嵌套的时候，内部的盒子设置的margin-top会加到外边的盒子上，导致内部的盒子margin-top设置失败。解决方法：
+            <ol>
+                <li>外部盒子设置一个边框</li>
+                <li>外部盒子设置overflow:hidden</li>
+                <li>使用伪元素类：<br>&nbsp;&nbsp;&nbsp;
+                    .clearfix:before{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    content: '';<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    display:table;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    }
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

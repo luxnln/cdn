@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>走路动画</title>
+	<style type="text/css">
+		.box{
+			width: 70px;
+			height: 108px;
+			border: 1px solid #ccc;
+			margin: 50px auto 0;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.box img{
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			width: 563px;
+			height: 108px;
+			
+			animation: walking 1.0s steps(8) infinite; /* 关键帧动画 */
+		}
+
+		@keyframes walking{ /* 设置动画 */
+			from{
+				left: 0px;
+			}to{
+				left: -563px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="../images/人物走路.PNG" alt="人物走路动画">
+	</div>
+</body>
+</html>

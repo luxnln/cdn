@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>圆角透明度</title>
+	<style type="text/css" media="screen">
+		.box {
+			background-color: lightgray;
+			width: 250px;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>CSS3圆角、rgba</h3>
+
+	<h5>CSS3圆角</h5>
+	<div>&nbsp;&nbsp;&nbsp;
+		设置某一个角的圆角，比如设置左上角的圆角：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		border-top-left-radius:30px 60px;<br>&nbsp;&nbsp;&nbsp;
+		同时分别设置四个角：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		border-radius:30px 60px 120px 250px;<br>&nbsp;&nbsp;&nbsp;
+		设置四个圆角相同：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		border-radius: 50%;
+	</div>
+
+	<h5>rgba（新的颜色值表示法）</h5>
+	<ol>
+		<li>
+			盒子透明表示法：<br>
+			<div class="box">
+				.box{<br>&nbsp;&nbsp;&nbsp;
+				opactity: 0.1;<br>&nbsp;&nbsp;&nbsp;
+				/* 设置IE兼容 透明度为0.1就等于10，0.3就是等于30*/<br>&nbsp;&nbsp;&nbsp;
+				filter: alpha(opacity=10);<br>
+				}
+			</div>
+		</li>
+		<li>rgba(0,0,0,0.1)前三个值表示颜色，第四个数值表示颜色的透明度</li>
+	</ol>
+</body>
+
+</html>

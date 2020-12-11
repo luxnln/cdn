@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常用内置对象</title>
+	<style type="text/css">
+		.box {
+			background-color: lightgray;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<h3>常用内置对象</h3>
+	<ol>
+		<li>
+			document
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				document.getElementById &nbsp;// 通过id获取元素<br>&nbsp;&nbsp;&nbsp;
+				document.getElementsByTagName &nbsp;// 通过标签名获取元素<br>&nbsp;&nbsp;&nbsp;
+				documnet.referrer &nbsp;// 获取上一个跳转页面的地址(需要服务器环境)
+			</div>
+		</li>
+		<li>
+			location
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				window.location.href &nbsp;// 获取或重定url地址<br>&nbsp;&nbsp;&nbsp;
+				window.location.search &nbsp;// 获取地址参数部分<br>&nbsp;&nbsp;&nbsp;
+				window.location.hash &nbsp;// 获取页面锚点或者叫哈希值
+			</div>
+		</li>
+
+		<div style="font-size: 12px;"><b>课堂练习</b></div>
+		<div>&nbsp;&nbsp;&nbsp;
+			通过地址栏的参数改变页面状态--><a href="举例/常用内置对象练习.html" target="_blank">示例</a>
+		</div>
+
+		<li>
+			Math
+			<div class="box">
+				Math.random &nbsp;// 获取0~1的随机数<br>&nbsp;&nbsp;&nbsp;
+				Math.floor &nbsp;// 向下取整<br>&nbsp;&nbsp;&nbsp;
+				Math.ceil &nbsp;// 向上取整
+			</div>
+			<div>
+				<a href="举例/Math使用示例.html" target="_blank">Math使用示例</a>
+			</div>
+		</li>
+
+	</ol>
+</body>
+</html>

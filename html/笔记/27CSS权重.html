@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CSS权重</title>
+	<style type="text/css">
+		a {
+			text-decoration: none;
+		}
+
+		.box {
+			background-color: lightgray;
+		}
+	</style>
+</head>
+
+<body>
+	<h5>CSS权重</h5>
+	<p>CSS权重指的是样式的优先级，有两条或多条样式作用于一个元素，权重高的那条对样式元素起作用，权重相同的，后写的样式会覆盖前面写的样式</p>
+
+	<h5>权重的等级</h5>
+	<p>可以把样式的应用方式分为几个等级，按照等级来计算权重</p>
+	<ol>
+		<li>limportant，加在样式属性值后，权重值为10000</li>
+		<li>内联样式，如：sytle=""，权重值为1000</li>
+		<li>ID选择器，如：#content，权重值为100</li>
+		<li>类，伪类和属性选择器，如：countent、hover权重值为10</li>
+		<li>标签选择器和伪元素选择器，如：div、p、before权重为1</li>
+		<li>通用选择器（*）、自选择器（>）、相邻选择器（+）、同胞选择器（-）权重为0</li>
+	</ol>
+
+	<h5>权重计算实例</h5>
+	<ol>
+		<li>
+			<a href="举例/权重实例一.html" target="_blank">实例一</a><br>
+			<div class="box">
+				&lt;style type="text/css"&gt;<br>&nbsp;&nbsp;&nbsp;
+				div{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				color:red !import;<br>&nbsp;&nbsp;&nbsp;
+				}
+				&lt;/style&gt;<br>&nbsp;&nbsp;&nbsp;
+				...<br>&nbsp;&nbsp;&nbsp;
+				&lt;div style="color:blue"&gt;这是一个div元素&lt;/div&gt; <br>&nbsp;&nbsp;&nbsp;
+				&lt;!-- 两条样式同时作用一个div，上面的样式权重值为10000+1，下面那的行间样式的权重值为1000，所以文字的最终颜色为red --&gt;
+			</div>
+		</li>
+		<li>
+			<a href="举例/权重实例二.html" target="_blank">实例二</a><br>
+			<div class="box">
+				&lt;style type="text/css"&gt;<br>&nbsp;&nbsp;&nbsp;
+				#content div.main_content h2{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				color:red;<br>&nbsp;&nbsp;&nbsp;
+				}<br>&nbsp;&nbsp;&nbsp;
+				&lt;/style&gt;<br>&nbsp;&nbsp;&nbsp;
+				#content .main_content h2{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				color:blue;<br>&nbsp;&nbsp;&nbsp;
+				}<br>&nbsp;&nbsp;&nbsp;
+				...<br>&nbsp;&nbsp;&nbsp;
+
+				&lt;div id="content"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&lt;div id="content"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&lt;h2&gt;这是一个h2标题&lt;/h2&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;
+				&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;
+
+				&lt;!-- <br>&nbsp;&nbsp;&nbsp;
+				第一条样式的权重的计算：100+1+10+1，结果为112；<br>&nbsp;&nbsp;&nbsp;
+				第二条样式的权重的计算：100+10+1，结果为111；<br>&nbsp;&nbsp;&nbsp;
+				h2标题的最终颜色的为red<br>&nbsp;&nbsp;&nbsp;
+				--&gt;
+			</div>
+		</li>
+	</ol>
+</body>
+
+</html>

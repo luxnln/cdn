@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>函数的定义和调用</title>
+	<style type="text/css">
+		.box {
+			background-color: lightgray;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>函数</h3>
+	<p>函数就是重复执行的代码片</p>
+
+	<h5>函数定义与执行</h5>
+	<div class="box">
+		&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;
+		//函数定义<br>&nbsp;&nbsp;&nbsp;
+		function fnAlert(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		alert('hello!');<br>&nbsp;&nbsp;&nbsp;
+		}<br>&nbsp;&nbsp;&nbsp;
+		//函数执行<br>&nbsp;&nbsp;&nbsp;
+		fnAlert();<br>
+		&lt;/script&gt;
+	</div>
+
+	<h5>变量与函数预解析</h5>
+	<div>
+		JavaScript解析过程分为两个阶段，先是编译阶段，然后执行阶段在编译阶段会将function定义的函数提前，并且将var定义的变量提前，将它赋值为undefined。
+		<div class="box">&nbsp;&nbsp;&nbsp;
+			&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			//与解析会让函数的声明和定义提前<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			fnAlert();&nbsp;&nbsp;&nbsp;//弹出hello!<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			//函数的预解析会让函数的声明提前<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			alert(iNum);&nbsp;&nbsp;&nbsp;//弹出undifined<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			alert(iNum1); //使用一个未声明的变量，出错！<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var iNum = 12;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			function fnAlert(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			alert('hello!');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			}<br>&nbsp;&nbsp;&nbsp;
+			&lt;/script&gt;
+		</div>
+		<a href="举例/函数定义举例.html" target="_blank">举例</a>
+	</div>
+
+	<h5>提取行间事件</h5>
+	<a href="举例/提取行间事件举例.html" target="_blank">提取行间事件举例</a>
+
+	<h5>匿名函数</h5>
+	<div>匿名函数的写法在'提取行间事件举例.html'的源代码中有写到</div>
+
+	<h5>练习：网页换肤</h5>
+	<a href="举例/网页换肤.html" target="_blank">网页换肤</a>
+
+	<h5>函数传参</h5>
+	<div class="box">
+		&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		function fnAlert(a){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		alert(a);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		fnAlert(12345);<br>
+		&lt;/script&gt;
+	</div>
+
+	<h5>函数'return'关键字</h5>
+	<div>函数中'return'关键字的作用：
+		<ol>
+			<li>返回函数执行的结果</li>
+			<li>结束函数的运行</li>
+			<li>阻止默认行为</li>
+		</ol>
+
+		<div class="box">
+			&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			function fnAdd(iNum1, iNum2){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var iRs = iNum1 + iNum2;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			return iRs;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			alert('here!');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			}<br>
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			fnAlert(12345);<br>
+			&lt;/script&gt;
+		</div>
+	</div>
+</body>
+
+</html>

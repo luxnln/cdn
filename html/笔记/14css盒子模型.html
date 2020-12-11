@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>css盒子模型</title>
+</head>
+
+<body>
+    <div>
+        <h5>盒子模型解释</h5>
+        <div>&nbsp;&nbsp;&nbsp;元素在页面中显示成一个方块，类似一个盒子，盒子模型的示意图如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="imges/盒子模型示意图.PNG"><br>&nbsp;&nbsp;&nbsp;
+            把元素叫做盒子，设置对应的样式分别为：盒子的宽度（width）、盒子的高度（height）、盒子的边框（border）、盒子的内容和边框之间的距离（padding）、盒子与盒子之间的间距（margin）。
+        </div><br>
+
+        <h5>设置宽高</h5>
+        <div>&nbsp;&nbsp;&nbsp;
+            width:200px; /*设置盒子的宽度，此宽度是指盒子内容的宽度，不是盒子整体的宽度*/<br>&nbsp;&nbsp;&nbsp;
+            height:200px; /*设置盒子的高度，此高度是指盒子内容的宽度，不是盒子整体的高度*/
+        </div>
+
+        <h5>设置边框</h5>
+        <div>&nbsp;&nbsp;&nbsp;
+            设置一边的边框，可以按如下设置：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            border-[top|left|right|bottom]-[color|width|style|[...]]:
+            对应的值;&nbsp;&nbsp;-->&nbsp;&nbsp;设置某条边框的某个属性<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            或者：border-top|left|right|bottom]:[边框的值]|[风格]|[颜色]|[...];&nbsp;&nbsp;-->&nbsp;&nbsp;设置某条变宽的各个属性
+            顺序不固定<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            或者：border:[边框的值]|[风格]|[颜色]|[...];&nbsp;&nbsp;-->&nbsp;&nbsp;同时设置四条边框的属性，顺序不固定
+        </div>
+
+        <h5>设置盒子内容与边框的间距</h5>
+        <div>&nbsp;&nbsp;&nbsp;padding:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            padding-[top|left|right|bottom]:
+            对应的值;&nbsp;&nbsp;-->&nbsp;&nbsp;设置内容与某条边框之间的距离<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            使用padding: ...; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            指定四个值-->padding: 顶部的的距离 右边的距离 底部的距离
+            左边的距离;&nbsp;&nbsp;-->&nbsp;&nbsp;设置内容与四条边框之间距离，设置值的顺序从顶部开始顺时针转<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            指定三个值-->padding: 顶部的的距离 右、左边的距离
+            底部的距离;&nbsp;&nbsp;-->&nbsp;&nbsp;设置内容与四条边框之间距离<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            指定两个值-->padding: 顶、底部的的距离
+            右、左边的距离;&nbsp;&nbsp;-->&nbsp;&nbsp;设置内容与四条边框之间距离<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            指定一个值-->padding:
+            同时设置四边的距离;&nbsp;&nbsp;-->&nbsp;&nbsp;设置内容与四条边框之间距离<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+        <h5>设置外间距margin</h5>
+        <div>&nbsp;&nbsp;&nbsp;外边距的设置方法与padding的设置方法相同，将上面设置项中的'padding'换成'margin'就是外边距设置的方法。
+        </div>
+    </div>
+
+    <div>
+        <h5>盒子模型示例：</h5>
+        <div>
+            .box{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            width:200px; /*设置盒子模型内容的宽度*/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            height:200px; /*设置盒子模型内容的高度*/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            background-color:gold;&nbsp;&nbsp; /*设置盒子模型的背景颜色*/<br>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            border: 10px solid #000;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            padding: 20px;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            margin: 100px;<br>&nbsp;&nbsp;
+            }<br>
+            <br>&nbsp;&nbsp;&nbsp;
+            &lt;div class="box">元素在页面中显示成一个方块，类似一个盒子。&lt;/div&gt;<br>&nbsp;&nbsp;</p>
+
+        </div>
+
+        <div>
+            <h5>代码效果：</h5>
+            <div style="
+                    width:200px; /*设置盒子模型内容的宽度*/
+                    height:200px; /*设置盒子模型内容的高度*/
+                    background-color:gold;   /*设置盒子模型的背景颜色*/
+                
+                   	border: 10px solid #000;
+                    padding: 20px;
+                    margin: 100px;*" class="box">
+                元素在页面中显示成一个方块，类似一个盒子元素在页面中显示成一个方块，类似一个盒子元素在页面中显示成一个方块，类似一个盒子元素在页面中显示成一个方块，类似一个盒子元素在页面中显示成一个方块，类似一个盒子
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

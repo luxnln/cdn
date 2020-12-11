@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>操作元素举例</title>
+	<style type="text/css">
+		.box {
+			background-color: lightgray;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>操作元素属性</h3>
+	<div>获取的页面元素，就可以对页面元素的属性进行操作，属性的操作包括属性的读和写。</div>
+
+	<h5>操作属性的方法</h5>
+	<ol>
+		<li>"."操作</li>
+		<li>"[]"操作</li>
+	</ol>
+
+	<h5>属性写法</h5>
+	<ol>
+		<li>html的属性和js里面属性写法一样</li>
+		<li>"class"属性成"className"</li>
+		<li>"style"属性里面的属性，有横杆的改成驼峰式，比如："font_size"，改成"style.fontSize</li>
+	</ol>
+	<div>
+		通过"."操作属性：
+		<div class="box">&nbsp;&nbsp;&nbsp;
+			&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			windo.onload = function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var oDiv1 = document.getElementById('div');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var oA = document.getElementById('link1');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var oDiv2 = document.getElementById('box');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			//读取属性值<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var sId = oDiv1.id;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			alert(sId);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			//写属性<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			oDiv.style.color = 'red';<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			oA.href = "http://www.baidu.com";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			oA.title = "这是去到百度网的链接";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			oA.target = "_blank";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			//操作class属性需要写成className<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			oDiv2.className = "box2";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			}<br>&nbsp;&nbsp;&nbsp;
+			&lt;/script&gt;<br>&nbsp;&nbsp;&nbsp;
+			...<br>&nbsp;&nbsp;&nbsp;
+			&lt;style type="text/css"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			.box{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			font-size:20px;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			color:gold;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			.box2{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			font-size:30px;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			color:pink;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			}<br>&nbsp;&nbsp;&nbsp;
+			&lt;/style&gt;<br>&nbsp;&nbsp;&nbsp;
+			...<br>&nbsp;&nbsp;&nbsp;
+			&lt;div id ="div"&gt;这是一个div元素&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;
+			&lt;a href="#" id="link"&gt;这是一个链接&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;
+			&lt;div id ="box"&gt;这是一个div元素&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;
+			...
+		</div>
+		通过"[]"操作属性：
+		<div class="box">&nbsp;&nbsp;&nbsp;
+			&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			windo.onload = function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var oDiv = document.getElementById('div');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+			var sMystyle = 'color';<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var sValue = 'red';<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+			//可以是：oDiv.style.color = sValue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			//属性用变量来代替的话不可以是：oDiv.style.sMystyle =
+			sValue;需要用[]来操作<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			oDiv.style[sMystyle] = sValue;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			}<br>&nbsp;&nbsp;&nbsp;
+			&lt;/script&gt;<br>&nbsp;&nbsp;&nbsp;
+			...<br>&nbsp;&nbsp;&nbsp;
+
+			&lt;div id ="div"&gt;这是一个div元素&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;
+			...
+		</div>
+	</div>
+
+	<h5>innerHTML</h5>
+	<div>innerHTML可以读取或者写入标签包裹的内容
+		<div class="box">&nbsp;&nbsp;&nbsp;
+			&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			windo.onload = function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var oDiv = document.getElementById('div');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+			//读取<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			var sTxt = oDiv.innerHTML;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			alert(sTxt);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			//写入,原来的内容会被替换<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			oDiv.innerHTML =
+			"&lt;href='http://www.baidu.com'&gt;百度&lt;/a&gt;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			}<br>&nbsp;&nbsp;&nbsp;
+			&lt;/script&gt;<br>&nbsp;&nbsp;&nbsp;
+			...<br>&nbsp;&nbsp;&nbsp;
+
+			&lt;div id ="div"&gt;这是一个div元素&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;
+		</div>
+	</div>
+</body>
+
+</html>

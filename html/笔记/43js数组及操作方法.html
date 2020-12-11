@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>js数组及操作方法</title>
+	<style type="text/css">
+		.box {
+			background-color: lightgray;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>js数组及操作方法</h3>
+	<p>数组就是一组数据的集合，javascript中，数组里面的数据可以是不同类型的。</p>
+
+	<h5>定义数组的方法</h5>
+	<div class="box">&nbsp;&nbsp;&nbsp;
+		// 对象的实例创建<br>&nbsp;&nbsp;&nbsp;
+		var aList = new Array(1, 2, 3);<br>&nbsp;&nbsp;&nbsp;
+		<br>&nbsp;&nbsp;&nbsp;
+		// 直接量创建<br>&nbsp;&nbsp;&nbsp;
+		var aList2 = [1, 2, 3, 'asd', true]
+	</div>
+
+	<h5>操作数组中数据的方法</h5>
+	<ol>
+		<li>
+			获取数组的长度：变量名.length;
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				var aList = [1, 2, 3, 4, 5];<br>&nbsp;&nbsp;&nbsp;
+				alter(aList.length); &nbsp;// 弹出5
+			</div>
+		</li>
+		<li>
+			用下标操作数组的某个数据：变量名[下标];
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				var aList = [1, 2, 3, 4, 5];<br>&nbsp;&nbsp;&nbsp;
+				aList[1] = 9;<br>&nbsp;&nbsp;&nbsp;
+				alter(aList[1]); &nbsp;//弹出9
+			</div>
+		</li>
+		<li>
+			join()将数组成员通过一个分隔符合并成字符串
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				var aList = [1, 2, 3, 4];<br>&nbsp;&nbsp;&nbsp;
+				alert(aList.join('-')); &nbsp;// 弹出1-2-3-4
+			</div>
+		</li>
+		<li>
+			push()和pop()从数组最后增加成员或删除成员
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				var aList = [1, 2, 3, 4];<br>&nbsp;&nbsp;&nbsp;
+				aList.push(5);<br>&nbsp;&nbsp;&nbsp;
+				alert(aList); &nbsp;// 弹出1,2,3,4,5<br>&nbsp;&nbsp;&nbsp;
+				aList.pop();<br>&nbsp;&nbsp;&nbsp;
+				alert(aList); &nbsp;// 弹出1,2,3,4
+			</div>
+		</li>
+		<li>
+			unshift()和shift()从数组前面增加成员或删除成员
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				var aList = [1, 2, 3, 4];<br>&nbsp;&nbsp;&nbsp;
+				aList.unshift(5);<br>&nbsp;&nbsp;&nbsp;
+				alert(aList); &nbsp;// 弹出5,1,2,3,4<br>&nbsp;&nbsp;&nbsp;
+				aList.shift();<br>&nbsp;&nbsp;&nbsp;
+				alert(aList); &nbsp;// 弹出1,2,3,4
+			</div>
+		</li>
+		<li>
+			reverse()将数组反转
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				var aList = [1, 2, 3, 4];<br>&nbsp;&nbsp;&nbsp;
+				aList.reverse();<br>&nbsp;&nbsp;&nbsp;
+				alert(aList); &nbsp;//弹出4,3,2,1
+			</div>
+		</li>
+		<li>
+			indexOf(n)返回数组中值为n的元素第一次出现的索引值
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				var aList = [1, 2, 3, 4, 1, 3, 4];<br>&nbsp;&nbsp;&nbsp;
+				alert(aList.indexof(1));
+			</div>
+		</li>
+		<li>
+			splice()在数组中增加或删除成员
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				var aList = [1, 2, 3, 4];<br>&nbsp;&nbsp;&nbsp;
+				aList.splice(2, 1, 7, 8, 9); &nbsp;//从索引值为2的元素开始，删除一个元素，然后在此位置增加'7,8,9'三个元素<br>&nbsp;&nbsp;&nbsp;
+				alert(aList); &nbsp;// 弹出1,2,7,8,9,4
+			</div>
+		</li>
+	</ol>
+
+	<h5>多维数组</h5>
+	<p>多为数组指的是数组的成员也是数组的数组。</p>
+	<div class="box">&nbsp;&nbsp;&nbsp;
+		var aList = [[1,2,3], ['a', 'b', 4]];<br>&nbsp;&nbsp;&nbsp;
+		alert(aList[0][1]); &nbsp;// 弹出2
+	</div>
+	<p>批量操作数组中的数据，需要用到循环语句。</p>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+HTML（HyperText Mark-up Language)意思是超文本标记语言，超文本指的是超链接，标记指的是标签
+
+HTML基本结构：
+<!DOCTYPE html>
+<html lang="en">  <!--lang:定义网页的语言，en是英文，zh_CN是中文-->
+	<head>
+		<meta charset="UTF-8">  <!--编码-->
+		<title>网页标签</title>  
+	</head>
+	<body>
+		网页显示内容
+	</body>
+</html>
+
+
+HTML文档类型：目前常用的XHTML 1.0 和 HTML5
+两者区别：
+	1、文档声明和编码声明
+	2、HTML5新增了标签元素以及元素属性
+
+HTML注释：
+	<!-- 这是一段注释 -->
+
+前端开发流程：
+	1、创建页面项目目录
+	2、使用Photoshop对效果图切图，切出网页中需要的小图片
+	3、将装饰类图像合并，制作成雪碧图
+	4、结合Photoshop和代码编辑器，参照效果图，进行html和css代码书写，制作页面
+	

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>for循环</title>
+	<style type="text/css">
+		.box {
+			background-color: lightgray;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>循环语句</h3>
+	<p>程序中进行有规律的重复性操作，需要用到循环语句</p>
+
+	<h5>for循环</h5>
+	<div class="box">&nbsp;&nbsp;&nbsp;
+		for (var i = 0; i < len; i++){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			...<br>&nbsp;&nbsp;&nbsp;
+			}
+	</div>
+
+	<h5>课堂练习</h5>
+	<ol>
+		<li>将数组中的数据分别用弹框弹出 --> <a href="举例/for循环实例一.html" target="_blank">实例</a></li>
+		<li>将数组中的数据放入到页面中的列表中 --> <a href="举例/for循环实例二.html" target="_blank">实例</a></li>
+	</ol>
+
+	<h5>while循环</h5>
+	<div class="box">&nbsp;&nbsp;&nbsp;
+		var i = 0;<br>
+		<br>&nbsp;&nbsp;&nbsp;
+		while(i<8){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			......<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			i++;<br>&nbsp;&nbsp;&nbsp;
+			}
+	</div>
+
+	<h5>数组去重</h5>
+	<div class="box">&nbsp;&nbsp;&nbsp;
+		var aList = [1,2,3,4,3,2,1,2,3,4,5,6,5,3,2,2,2,3,2,1,2,4,5,7];<br>&nbsp;&nbsp;&nbsp;
+		var aList2 = [];<br>
+		<br>&nbsp;&nbsp;&nbsp;
+		for(var i = 0; i < aList.length; i++){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			if(aList.indexOf(aList[i]) == i){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			aList2.push(aList[i]);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			}<br>&nbsp;&nbsp;&nbsp;
+			}<br>
+			<br>&nbsp;&nbsp;&nbsp;
+			alert(aList2);
+	</div>
+</body>
+
+</html>

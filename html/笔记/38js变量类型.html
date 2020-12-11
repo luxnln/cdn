@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>js变量类型</title>
+	<style type="text/css">
+		.box {
+			background-color: lightgray;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h5>变量</h5>
+	<p>JavaScript是一种弱类型语言，javascript的变量类型由它的值来决定。定义变量需要用关键字'var'
+		<span class="box">&nbsp;&nbsp;&nbsp;
+			var iNum = 123;<br>&nbsp;&nbsp;&nbsp;
+			var sTr = 'asd';<br>&nbsp;&nbsp;&nbsp;
+			//同时定义多个变量可以用","隔开，公用‘var’关键字<br>&nbsp;&nbsp;&nbsp;
+			var iNum = 45, sTr = 'qwe', sCount = '68';&nbsp;&nbsp;&nbsp;
+		</span>
+	</p>
+
+	<h5>变量类型</h5>
+	<p>5种基本类型
+		<ol>
+			<li>number数字类型</li>
+			<li>string字符串类型</li>
+			<li>boolean布尔类型</li>
+			<li>undefined underfined类型，变量声明未初始化，它的值就是underfined</li>
+			<li>null null类型，表示空对象，如果定义的变量将来准备保存对象，可以将变量初始化为null，在页面上获取不到对象放回的值就是null</li>
+		</ol>
+		1种复合类型：<br>&nbsp;&nbsp;&nbsp;
+		object
+	</p>
+
+	<h5>javascript语句与注释</h5>
+	<ol>
+		<li>一条javascript语句以';'结尾</li>
+		<li>//表示单行注释，/*表示多行注释*/</li>
+	</ol>
+
+	<h5>变量、函数、属性、函数参数命名规范</h5>
+	<ol>
+		<li>区分大小写</li>
+		<li>第一个字符必须是字母、下划线(_)或者是美元符号($)</li>
+		<li>其他字符可以是字母、下划线、美元符或数字</li>
+	</ol>
+
+	<h5>匈牙利命名风格：</h5>
+	<div>
+		对象o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Object&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比如：oDiv<br>
+		数组a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Array&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比如：aItems<br>
+		字符串s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比如：sUserName<br>
+		整数i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Integer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比如：iItemCount<br>
+		布尔值b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Boolean&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比如：bIsCompete<br>
+		浮点数f&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Float&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比如：fPrice<br>
+		函数fn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Function&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比如：fnHandler<br>
+		正则表达式re&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RegExp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比如：reEmailCheck<br>
+	</div>
+
+	<h3><a href="举例/js变量声明和类型.html" target="_blank">举例</a></h3>
+</body>
+
+</html>

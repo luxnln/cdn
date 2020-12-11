@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>css选择器</title>
+</head>
+
+<body>
+    <div>
+        <h5>css颜色表示法</h5>
+        <div>
+            css颜色值的主要表示方法：
+            <ol>
+                <li>颜色名表示，比如：red红色、gold金色</li>
+                <li>rgb表示，比如：rgb(255, 0, 0)表示红色</li>
+                <li>16进制数值表示，比如：#ff0000表示红色，这种可以简写成#f00</li>
+            </ol>
+        </div>
+    </div>
+
+    <div>
+        <h5>CSS选择器</h5>
+        <ol>
+            <li>标签选择器<br>&nbsp;&nbsp;&nbsp;
+                标签选择器，此种选择器影响范围大，建议尽量应用在层级选择器中。<br>&nbsp;&nbsp;&nbsp;
+                举例：（标签名{...}）<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                *{...} /* "*"表示选择所有的标签*/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                div{...}
+            </li>
+            <li>id选择器<br>&nbsp;&nbsp;&nbsp;
+                通过id名来选择元素，元素的id名称不能重复，所以一个样式设置项只能对应于页面上一个元素，不能重复用，id名一般给程序使用，所以不推荐使用id作为选择器。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                举例：（#id值{...}）<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                #mydiv{...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div id="mydiv1"&gt;&lt;/div&gt;
+                <!--以上一条样式 -->
+            </li>
+            <li>类选择器（.类对应值{...}）<br>&nbsp;&nbsp;&nbsp;
+                通过类名来选择元素，一个类可以应用于多个元素，一个元素上也可以使用多个类，应用灵活，可重复，是css中应用最多的一种选择器。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                举例：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .red{...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .myclass{...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .big1{...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div class="red" class="myclass"&gt;...&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div class="big1" class="myclass"&gt;...&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+            <li>层级选择器<br>&nbsp;&nbsp;&nbsp;
+                主要应用在选择父元素下的子元素，或者子元素下面的子元素，可与标签元素介个使用，减少命名，同时也可以通过层级，防止命名冲突。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                举例：（选择父元素 选择子元素{...}）<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .box span{...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                div a{...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                div #no{...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                可以使用标签，id，类等来选择元素<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div class="box"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;span id="no"&gt;...&lt;/span&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;a href="#" class="red"&gt;...&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;h3 class="red">...&lt;/h3&gt;
+            </li>
+            <li>组选择器<br>&nbsp;&nbsp;&nbsp;
+                多个选择器，如果有同样的样式设置，可以使用组选择器<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                举例：（元素，元素，元素{...}）<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .box1, box2, box3{...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .box1{...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .box2{...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .box3{...}<br>
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div class="box1"&gt;...&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div class="box2"&gt;...&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div class="box3"&gt;...&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+            <li>伪类及伪元素选择器<br>&nbsp;&nbsp;&nbsp;
+                常用的伪类选择器有hover，表示鼠标悬浮在元素上时的状态，伪元素选择器有before和after，它们可以通过样式在元素中插入类容。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .box1:hover{...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .box2:before{content:"行首文字";...}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .box3:agter{content:"行尾文字";...}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;a href="#" class="box1"&gt;...&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div class="box2"&gt;...&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;div class="box3"&gt;...&lt;/div&gt;
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

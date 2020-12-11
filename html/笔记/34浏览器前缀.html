@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>浏览器前缀</title>
+	<style type="text/css">
+		.box {
+			background-color: lightgray;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>CSS3浏览器前缀</h3>
+
+	<h5>浏览器样式前缀</h5>
+	<div>
+		为了让css3样式兼容，需要将某些样式加上浏览器前缀：<br>&nbsp;&nbsp;&nbsp;
+		-ms-兼容IE浏览器<br>&nbsp;&nbsp;&nbsp;
+		-moz-兼容firefox<br>&nbsp;&nbsp;&nbsp;
+		-0-兼容opera<br>&nbsp;&nbsp;&nbsp;
+		-webkit-兼容chrome和safari<br>&nbsp;&nbsp;&nbsp;
+		比如:
+		<div class="box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			div{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			-ms-transform:rotate(30deg);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			-webkit-transform:rotate(30deg);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			-o-transform:rotate(30deg);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			-moz-transform:rotate(30deg);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			transform:rotate(30deg);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			}
+		</div>
+	</div>
+</body>
+
+</html>

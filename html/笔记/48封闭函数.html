@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>封闭函数</title>
+	<style type="text/css">
+		.box {
+			background-color: lightgray;
+		}
+	</style>
+</head>
+<body>
+	<h3>封闭函数</h3>
+	<p>封闭函数是javascript中匿名函数的另外一种写法，创建一个一开始就执行而不用命名的函数。</p>
+
+	<div>
+		<p>一般定义的函数和执行函数：</p>
+		<div class="box">&nbsp;&nbsp;&nbsp;
+			function myalert(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				alert('hello!');<br>&nbsp;&nbsp;&nbsp;
+		}<br>
+		<br>&nbsp;&nbsp;&nbsp;
+		myalert();
+		</div>
+
+		<p>封闭函数：</p>
+		<div class="box">&nbsp;&nbsp;&nbsp;
+			(function myalert(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				alert('hello!');<br>&nbsp;&nbsp;&nbsp;
+		})();<br>
+		// 在封闭函数前加一个";"，可以避免js压缩的时候出错
+		</div>
+
+		<p>还可以在函数定义前加上"~"和"!"等符号来定义匿名函数</p>
+		<div class="box">&nbsp;&nbsp;&nbsp;
+			!function myalert(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				alert('hello!');<br>&nbsp;&nbsp;&nbsp;
+			}();<br>
+			<br>&nbsp;&nbsp;&nbsp;
+			~function myalert(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				alert('hello!');<br>&nbsp;&nbsp;&nbsp;
+			}();
+		</div>
+	</div>
+</body>
+</html>

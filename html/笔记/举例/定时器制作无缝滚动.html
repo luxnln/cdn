@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器制作无缝滚动</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.list_con {
+			width: 1000px;
+			height: 200px;
+			border: 1px solid #000;
+			margin: 10px auto 0;
+			background-color: #f0f0f0;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.list_con ul {
+			list-style: none;
+			width: 2000px;
+			height: 200px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.list_con li {
+			width: 180px;
+			height: 180px;
+			float: left;
+			margin: 10px;
+			overflow: hidden;  /* 图片尺寸大过了设定的尺寸*/
+		}
+
+		.btns_con {
+			width: 1000px;
+			height: 30px;
+			margin: 50px auto 0;
+			position: relative;
+		}
+
+		.left, .right{
+			width: 30px;
+			height: 30px;
+			background-color: gold;
+			position: absolute;
+			left: -40px;
+			top: 124px;
+			font-size: 30px;
+			line-height: 30px;
+			color: #000;
+			font-family: 'Arial';
+			text-align: center;
+			cursor: pointer;
+			border-radius: 15px;
+			opacity: 0.5;
+		}
+
+		.right {
+			left: 1010px;
+			top: 124px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		window.onload = function(){
+			var oBtn01 = document.getElementById('btn01');
+			var oBtn02 = document.getElementById('btn02');
+
+			var oDiv = document.getElementById('slide');
+			var oUl = oDiv.getElementsByTagName('ul')[0];
+
+			var iLeft = 0;
+			var iSpeed = -2;  // 移动的速度
+			var iNowSpeed = 0;  // 用于暂存速度，当图片暂停和恢复时
+
+			oUl.innerHTML += oUl.innerHTML;  // 将ul中的内内容多复制一份
+
+			// 定义移动函数
+			function moving(){
+				iLeft += iSpeed;
+
+				if(iLeft < -1000){  //当图片往左动的时候，实现无缝判断
+					iLeft = 0;  // 当滚动到末尾的时候其瞬间复原，且因为在末尾与开头都是一样的画面，所以动画不会表现出明显的跳转。
+				}
+
+				if(iLeft > 0){  //当图片往右动的时候，实现无缝判断
+					iLeft = -1000;  //与上同理
+				}
+
+				oUl.style.left = iLeft + 'px';
+			}
+
+			// 启动动画
+			var timer = setInterval(moving, 30);
+
+			// 实现箭头的功能
+			oBtn01.onclick = function(){
+				iSpeed = -2;  //当点击箭头的时候，通过该iSpeed的值来改变那移动方向
+			}
+
+			oBtn02.onclick = function(){
+				iSpeed = 2;
+			}
+
+			// 实现当鼠标停留在框内的时候，图片停止移动
+			oDiv.onmouseover = function(){
+				iNowSpeed = iSpeed;
+				iSpeed = 0;
+			}
+
+			// 当鼠标移开的时候，图片继续移动
+			oDiv.onmouseout = function(){
+				iSpeed = iNowSpeed;
+			}
+
+
+		}
+	</script>
+</head>
+<body>
+	<!-- 制作箭头 -->
+	<div class="btns_con">
+		<div class="left" id="btn01">&lt;</div>  
+		<div class="right" id="btn02">&gt;</div>
+	</div>
+	<!-- 制作图片区域 -->
+	<div class="list_con" id="slide">
+		<ul>
+			<li><a href=""><img src="../images/a.jpg" alt="壁纸"></a></li>
+			<li><a href=""><img src="../images/b.jpg" alt="壁纸"></a></li>
+			<li><a href=""><img src="../images/c.jpg" alt="壁纸"></a></li>
+			<li><a href=""><img src="../images/d.jpg" alt="壁纸"></a></li>
+			<li><a href=""><img src="../images/e.jpg" alt="壁纸"></a></li>
+		</ul>
+	</div>
+</body>
+</html>

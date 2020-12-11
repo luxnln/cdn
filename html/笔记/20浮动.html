@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>浮动</title>
+</head>
+
+<body>
+    <h3>浮动</h3>
+
+    <div>
+        <h5>浮动特性</h5>
+        <ol>
+            <li>浮动元素有左浮动（float:left）和右浮动（float:right）两种</li>
+            <li>浮动的元素会向左或向右浮动，碰到父元素边界、其他元素才停下来</li>
+            <li>相邻浮动的块元素可以并在一行，超出父级宽度就换行</li>
+            <li>浮动让行内元素或块元素自动转化为行内块元素（此时不会右行内快元素间隙问题）</li>
+            <li>浮动元素后面灭有浮动的元素会占据浮动元素的位置，没有浮动的元素内文字会避开浮动的元素，形成文字绕图的效果</li>
+            <li>父元素如果没有设置尺寸（一般是高度不设置），父元素内整体浮动的元素无法撑开父元素，父元素需要清除浮动</li>
+            <li>浮动元素之间没有垂直的合并</li>
+        </ol>
+
+        <h5>清除浮动</h5>
+        <ul>
+            <li>父级上增加属性：overflow:hiddeng</li>
+            <li>在最后一个子元素的后面加一个空的div标签，给它样式属性clear:both（不推荐）</li>
+            <li>是采用成熟的清除浮动样式，clearfix<br>&nbsp;&nbsp;&nbsp;
+                .clearfix:after, .clearfix:before{content:""; display:table;}<br>&nbsp;&nbsp;&nbsp;
+                .clearfix:after{clear:both}<br>&nbsp;&nbsp;&nbsp;
+                .clearfix{zoom:1;}<br>&nbsp;&nbsp;
+                清除浮动只需要写.clearfix:after{content:"";display:table}就可以了，上列代码写这么多，是因为把清除浮动和margin-top塌陷两个功能整合起来了。<br>&nbsp;
+                清除浮动的使用方法：<br>&nbsp;&nbsp;&nbsp;
+                .con2{...overflow:hidden}<br>&nbsp;&nbsp;&nbsp;
+                或者<br>&nbsp;&nbsp;&nbsp;
+                &lt;div class="con2 clearfix"&gt;&lt;/div&gt;--->在css中设置clearfix
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

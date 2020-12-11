@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>用列表制作菜单</title>
+	<style type="text/css">
+		.menu {
+			width: 694px;
+			height: 50px;
+
+			list-style: none;
+			/*去掉ul标签的小圆点*/
+			margin: 50px auto 0;
+			padding: 0;
+		}
+
+		.menu li {
+			width: 98px;
+			height: 48px;
+			border: 1px solid gold;
+			background-color: #fff;
+			display: inline-block;
+
+			float: left;
+			/*利用浮动去掉内联元素间距*/
+			margin-left: -1px;
+
+		}
+
+		.menu li a {
+			display: block;
+			width: 98px;
+			height: 48px;
+			text-decoration: none;
+			text-align: center;
+			/*设置文字水平居中*/
+			line-height: 48px;
+			/*设置文字垂直居中，具体的值，看情况*/
+			font-size: 16px;
+			color: pink;
+		}
+
+		.menu li a:hover {
+			background-color: gold;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="menu">
+		<li><a href="#">公司简介</a></li>
+		<li><a href="#">公司简介</a></li>
+		<li><a href="#">公司简介</a></li>
+		<li><a href="#">公司简介</a></li>
+		<li><a href="#">公司简介</a></li>
+		<li><a href="#">公司简介</a></li>
+		<li><a href="#">公司简介</a></li>
+	</ul>
+</body>
+
+</html>

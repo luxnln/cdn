@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>表单标签</title>
+</head>
+
+<body>
+    <div>
+        <h5>html表单</h5>
+        <div>&nbsp;&nbsp;&nbsp;
+            表单用于搜集不同类型的用户输入，表单由不同类型的标签组成，相关标签及属性用法如下：<br>
+            <ol>
+                <li>&lt;form&gt;标签定义整体的表单区域；
+                    <ul>
+                        <li>action属性 定义表单数据提交地址，值为空时，提交到本地</li>
+                        <li>method属性 定义表单提交的方式，一般有“get”方式和“post”方式，默认“get”方式</li>
+                    </ul>
+                </li>
+                <li>&lt;label&gt;标签为表单元素定义文字标注<br>&nbsp;&nbsp;&nbsp;
+                    &lt;label&gt;标签有一个属性叫for=""，for的值是input标签设置的id值，设置后点击被label标签包裹的内容，就等于点击for的值对应id的input标签</li>
+                <li>&lt;input&gt;标签 定义通用的表单元素
+                    <ul>
+                        <li>type属性
+                            <ul>
+                                <li>type="text"定义单行文本输入框<br>
+                                    例如:
+                                    <form>&nbsp;&nbsp;&nbsp;
+                                        <label>用户名：</label>
+                                        <input type="text" name="" />
+                                    </form>
+                                </li>
+                                <li>type="password"定义密码输入框<br>
+                                    例如:
+                                    <form>&nbsp;&nbsp;&nbsp;
+                                        <label>密&nbsp;&nbsp;&nbsp;码：</label>
+                                        <input type="password" name="" />
+                                    </form>
+                                </li>
+                                <li>type="radio"定义单选框<br>
+                                    定义多个单选框的时候，若是想要在一堆选项中只允许选择一个，那么需要把它们的标签的name属性改成一样的，这样就能单选了；例如:<br>
+                                    <form>
+                                        <label>性别：</label>
+                                        <input type="radio" name="sex1" />男
+                                        <input type="radio" name="sex2" />女
+                                        <br>
+                                        <label>性别：</label>
+                                        <input type="radio" name="sex" />男
+                                        <input type="radio" name="sex" />女
+                                        <br>
+                                    </form>
+                                    试试以上，两行单选框之间的区别
+                                </li>
+                                <li>type="checkbox"定义复选框<br>
+                                    例如:
+                                    <form>&nbsp;&nbsp;&nbsp;
+                                        <label>爱好</label>
+                                        <input type="checkbox" name="" />1
+                                        <input type="checkbox" name="" />2
+                                        <input type="checkbox" name="" />3
+                                        <input type="checkbox" name="" />4
+                                    </form>
+                                </li>
+                                <li>type="file"定义上传文件<br>
+                                    例如:
+                                    <form>&nbsp;&nbsp;&nbsp;
+                                        <label>请选择要上传的文件：</label>
+                                        <input type="file" name="" />
+                                    </form>
+                                </li>
+                                <li>type="submit"定义提交按钮<br>
+                                    例如:
+                                    <form>&nbsp;&nbsp;&nbsp;
+                                        <input type="submit" name="" value="提交按钮" />
+                                    </form>
+                                </li>
+                                <li>type="reset"定义重置按钮<br>
+                                    例如:对同一个form标签下的其他标签才有作用
+                                    <form>&nbsp;&nbsp;&nbsp;
+                                        <input type="reset" name="" value="重置" />
+                                    </form>
+                                </li>
+                                <li>type="image"定义图片作为提交按钮，用src属性定义图片地址<br>
+                                    例如: 但是利用type="image"会容易导致提交两次，所以一般不建议使用，如果真的想要用图片作为提交按钮，那么可以利用样式来做;
+                                    <form>&nbsp;&nbsp;&nbsp;
+                                        <input type="image" name="" src="imges/链接示例.jpg" />
+                                    </form>
+                                </li>
+                                <li>type="hidden"定义一个隐藏的表单域，用来存储值</li>
+                            </ul>
+                        </li>
+                        <li>value属性 定义表单元素的值</li>
+                        <li>name属性 定义表单元素的名称，此名称是提交数据是的键名</li>
+                    </ul>
+                </li>
+                <li>&lt;textarea&gt;标签 定义多行文本输入框<br>
+                    例如:
+                    <form>&nbsp;&nbsp;&nbsp;
+                        <label>个人介绍：</label>
+                        <textarea></textarea>
+                    </form>
+                </li>
+                <li>&lt;select&gt;标签 定义下拉表单元素</li>
+                <li>&lt;option&gt;标签 与&lt;select&gt;标签配合定义下拉表单元素中的选项<br>
+                    例如:
+                    <form>&nbsp;&nbsp;&nbsp;
+                        <label>籍贯：</label>
+                        <select name="site">
+                            <option value="0">北京</option>
+                            <option>上海</option>
+                            <option>湖南</option>
+                            <option>广州</option>
+                            <option>湖北</option>
+                        </select>
+                    </form>
+                </li>
+            </ol>
+            <p>注：使用提交按钮，提交数据，需要配合它上级form标签的action属性，来决定把数据提交给谁；<br>
+                同时需要提交的数据除了输入文本框只需要指定name，其他类型的标签，都需要指定value值，配合对应的name，组成键值对。另外，select标签配合option标签，select指定name，option指定value。然后提交的就是键值对数据
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

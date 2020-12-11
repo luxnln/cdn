@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>js介绍-js引入页面</title>
+	<style type="text/css">
+		.box {
+			background-color: lightgray;
+		}
+	</style>
+</head>
+
+<body>
+	<h5>JavaScript介绍</h5>
+	<div>
+		JavaScript是运行在浏览器端的脚本语言，JavaScript主要解决的是前端与用户交互的问题，包括使用交互与数据交互。JavaScript是浏览器解释执行的，前端脚本语言还有JScript（微软，IE独有），ActionScript（Adoube公司，需要插件）等。
+	</div>
+
+	<h5>JavaScript组成</h5>
+	<ol>
+		<li>ECMAscript javascript的语法（变量、函数、循环语句等语法）；</li>
+		<li>DOM 文档对象模型 操作html和css的方法；</li>
+		<li>BOM 浏览器对象模型 操作浏览器的一些方法。</li>
+	</ol>
+
+	<h5>JavaScript嵌入页面的方式</h5>
+	<ol>
+		<li>
+			行间事件（主要用于事件）<br>
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				&lt;input type="button" name="" onclick="alert('ok!');"&gt;
+			</div>
+		</li>
+		<li>
+			页面script标签嵌入<br>
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				&lt;script type="text/javascript"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				alert('ok!');<br>&nbsp;&nbsp;&nbsp;
+				&lt;/script&gt;
+			</div>
+		</li>
+		<li>
+			外部引用<br>
+			<div class="box">&nbsp;&nbsp;&nbsp;
+				&lt;script type="text/javascript" src="js/index.js"&gt;&lt;/script&gt;
+			</div>
+		</li>
+	</ol>
+	<div>onclick表示点击事件；<br>alert('ok!')弹出一个窗口，内容是ok!。</div>
+</body>
+
+</html>

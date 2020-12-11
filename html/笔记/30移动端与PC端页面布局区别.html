@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>移动端与PC端页面布局区别</title>
+	<style type="text/css">
+		.box {
+			background-color: lightgray;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>移动端与PC端页面布局区别</h3>
+
+	<h5>视口</h5>
+	<p>视口是移动设备上来显示网页的区域，一般会比移动端设备可视区域大，宽度可能是980px或者1024px，目的是为了显示整个为PC端设计的网页，这样带来的后果是移动端会出现横向滚动条，为了避免这种情况移动端会将视口缩放到移动端窗口的大小。这样让网页不容易观看，可以用meta标签，name="viewport"来设置视口的大小，将视口的大小设置为和移动设备可视区一样的大小。
+	</p>
+	<div>设置方法如下(快捷方式meta:vp+tab)：<br>&nbsp;&nbsp;&nbsp;</div>
+	<div class="box">
+		&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;
+		......<br>&nbsp;&nbsp;&nbsp;
+		&lt;meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,
+		minimum-scale=1.0"&gt;<br>&nbsp;&nbsp;&nbsp;
+		......<br>&nbsp;&nbsp;&nbsp;
+		&lt;head&gt;
+		&lt;!--
+		meta标签中的content中的"width=device-width"表示让视口宽度等于设备的宽度，后面的"user-scalable=no,initial-scale=1.0,..."等等，都指定用户不可以缩放，之所以写这么多个是因为保持在不同的移动设备中保持兼容性
+		--&gt;
+	</div>
+</body>
+
+</html>
